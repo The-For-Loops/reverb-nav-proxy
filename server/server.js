@@ -5,14 +5,10 @@ const port = 3000
 const bodyParser = require('body-parser')
 const path = require('path')
 
-
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use('/', express.static('./public'))
-
-
-
 
 app.use(
   '/api/nav',
@@ -21,7 +17,6 @@ app.use(
      changeOrigin: true
   })
 );
-
 app.use(
     '/api/display',
     createProxyMiddleware({
@@ -29,7 +24,6 @@ app.use(
        changeOrigin: true
     })
   );
-
 app.use(
   '/api/reviews',
   createProxyMiddleware({
@@ -37,7 +31,6 @@ app.use(
      changeOrigin: true
   })
 );
-
 app.use(
   '/api/listings',
   createProxyMiddleware({
