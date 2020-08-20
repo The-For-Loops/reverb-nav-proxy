@@ -1,0 +1,409 @@
+body {
+  font-family: Lato,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color: #414141;
+  font-size: 1.6em;
+  line-height: 1.4;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 21.12px;
+  font-weight: 400;
+  font-size:17.6px;
+  display: block;
+  color: #414141;
+  -webkit-font-smoothing:antialiased;
+}
+
+ul {
+  margin-left: -.8vw;
+  margin-right: 0.2vw;
+  padding-left: 20px;
+}
+
+/*===================================
+Modal
+===================================*/
+/* The Modal (background) */
+.closedModal {
+  display: none; /* Hidden by default */
+}
+.openedModal {
+  display: block;
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  justify-content: center;
+  text-align: center;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height: auto;
+  line-height: 21.12px;
+  font-weight: 400;
+  font-size:17.6px;
+  display: block;
+  color: #414141;
+  -webkit-font-smoothing:antialiased;
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.review-main-container {
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.review-main-content {
+  box-sizing: border-box;
+  margin-right: 35px;
+  width: 100%;
+  padding-left: 5%;
+}
+
+.review-sidebar {
+  flex-basis: 25%;
+  box-sizing: border-box;
+}
+
+.review-container-collapsed {
+  border: 1px solid #dcdcdc;
+  height:auto;
+  width:100%;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+.review-container-toggled {
+  border: 1px solid #dcdcdc;
+  height:auto;
+  width:100%;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+.review-header {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 36 36' width='36px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23c1c1c1'%3E%3Cpath class='cls-1' d='M4.46,12A1.5,1.5,0,0,1,7,10.92l11,11,11-11A1.5,1.5,0,1,1,31.1,13l-12,12a1.5,1.5,0,0,1-2.12,0L4.9,13A1.5,1.5,0,0,1,4.46,12Z'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-tap-highlight-color: transparent;
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1.5rem) 50%;
+  background-size: 2.5rem auto;
+  padding-right: 5rem;
+}
+
+.review-header:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 36 36' width='36px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23f6870f'%3E%3Cpath class='cls-1' d='M4.46,12A1.5,1.5,0,0,1,7,10.92l11,11,11-11A1.5,1.5,0,1,1,31.1,13l-12,12a1.5,1.5,0,0,1-2.12,0L4.9,13A1.5,1.5,0,0,1,4.46,12Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.review-header-toggled {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 36 36' width='36px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23c1c1c1'%3E%3Cpath class='cls-1' d='M31.54,24A1.5,1.5,0,0,1,29,25.09l-11-11-11,11A1.5,1.5,0,1,1,4.9,23l12-12a1.5,1.5,0,0,1,2.12,0l12,12A1.5,1.5,0,0,1,31.54,24Z'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-tap-highlight-color: transparent;
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1.5rem) 50%;
+  background-size: 2.5rem auto;
+  padding-right: 5rem;
+}
+
+.review-header-toggled:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 36 36' width='36px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23f6870f'%3E%3Cpath class='cls-1' d='M31.54,24A1.5,1.5,0,0,1,29,25.09l-11-11-11,11A1.5,1.5,0,1,1,4.9,23l12-12a1.5,1.5,0,0,1,2.12,0l12,12A1.5,1.5,0,0,1,31.54,24Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+.seller-review-individual {
+  display:flex;
+  flex-direction: column;
+  border-top-color:rgb(228, 228, 228);
+  border-top-style:solid;
+  border-top-width:1px;
+  font-size:14.4px;
+  height:auto;
+  width:auto;
+  margin-bottom:10px;
+  margin-top:10px;
+  /* max-width:80%;
+  min-width:50%; */
+  padding-bottom:10px;
+  padding-left:50.3px;
+  padding-right:20px;
+  padding-top:20px;
+  text-align:left;
+  -webkit-font-smoothing:antialiased;
+}
+
+.seller-review-item {
+  color:rgb(5, 123, 196);
+  cursor:pointer;
+  display:block;
+  font-weight:700;
+  height:16px;
+  line-height:20.16px;
+  margin-top:-5px;
+  margin-bottom:2px;
+  padding-bottom: 0px;
+  text-align:left;
+}
+
+.seller-review-item:hover {
+  color: orange;
+}
+
+.seller-reviewer-name-date {
+  font-size: 80%;
+  opacity: .7;
+}
+
+.star-rating-count {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: .6;
+  font-size: 1.3rem;
+  color: #414141;
+}
+
+.product-review-individual {
+  display:flex;
+  flex-direction: row;
+  border-top-color:rgb(228, 228, 228);
+  border-top-style:solid;
+  border-top-width:1px;
+  font-size:14.4px;
+  height:auto;
+  width:auto;
+  line-height:20.16px;
+  margin-bottom:10px;
+  margin-top:10px;
+  max-width:96%;
+  min-width:96%;
+  padding-bottom:10px;
+  padding-right:20px;
+  padding-top:20px;
+  text-align:left;
+}
+
+.product-user {
+  display:flex;
+  flex-direction: column;
+  font-size:14.4px;
+  font-weight:700;
+  height:169px;
+  text-align:center;
+  width:20%;
+  justify-content: flex-start;
+  }
+
+.product-main {
+  display:block;
+  font-size:14.4px;
+  height:auto;
+  line-height:20.16px;
+  text-align:left;
+  width:80%;
+}
+
+.avatar-container {
+  height:5rem;
+  width:5rem;
+  border-radius:50%;
+}
+
+.helpful-text {
+  font-size: 90%;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  color: #747474;
+}
+
+.button-view-all-reviews {
+  background-color:rgb(255, 255, 255);
+  border-color:rgb(211, 211, 211);
+  border-radius:4px;
+  border-style:solid;
+  border-width:1px;
+  color:rgb(65, 65, 65);
+  cursor:pointer;
+  display:inline-block;
+  font-family:Lato, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size:16px;
+  font-weight:700;
+  height:36px;
+  line-height:22.4px;
+  padding-bottom:6px;
+  padding-left:18px;
+  padding-right:18px;
+  padding-top:6px;
+  text-align:center;
+  white-space:nowrap;
+  width:154.031px;
+}
+
+.button-view-all-reviews:hover {
+  background: #f9f9f9;
+  color: #f6870f;
+  fill: #f6870f;
+}
+
+.button-align-center {
+  height:36px;
+  line-height:20.16px;
+  margin-top:17px;
+  margin-bottom:35px;
+  text-align:center;
+  width:auto;
+}
+
+.button-write-review {
+background-color:rgb(5, 123, 196);
+border-color:rgb(5, 117, 186);
+border-radius:4px;
+border-style:solid;
+border-width:1px;
+color:rgb(255, 255, 255);
+cursor:pointer;
+font-family:Lato, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+font-size:12.8px;
+font-weight:700;
+height:28.5938px;
+margin-left:20px;
+padding-bottom:4.8px;
+padding-left:14.4px;
+padding-right:14.4px;
+padding-top:4.8px;
+white-space:nowrap;
+width:auto;
+}
+
+.button-write-review:hover {
+  background: #068bdd;
+}
+
+.write-review-text {
+  color:rgb(65, 65, 65);
+  text-align:left;
+  display:block;
+  font-family:Lato, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size:13.3333px;
+  height:18px;
+  line-height:18.6667px;
+  margin-right:20px;
+  margin-top:5px;
+  width:auto;
+  text-align: center;
+  -webkit-font-smoothing:antialiased;
+}
+
+.page-numbers-container {
+  display:block;
+  position:inherit;
+  font-size:16px;
+  height:auto;
+  line-height:22.4px;
+  margin-bottom:30px;
+  margin-top:30px;
+  text-align:center;
+  width:721.328px;
+}
+
+.page-number {
+  display:inline-block;
+  height:36px;
+  line-height:22.4px;
+  margin-top:8px;
+  text-align:center;
+  width:auto;
+}
+
+.page-number-limit {
+  display:inline-block;
+  height:36px;
+  line-height:22.4px;
+  margin-top:8px;
+  text-align:center;
+  width:auto;
+  display:disabled;
+  opacity: 60%;
+  background-color: #dddddd;
+}
+
+/* .page-number-selected {
+  border-color:rgb(246, 135, 15);
+  border-radius:4px;
+  border-style:solid;
+  border-width:1px;
+  box-sizing:border-box;
+  color:rgb(65, 65, 65);
+  cursor:pointer;
+  display:inline-block;
+  font-weight:700;
+  height:36px;
+  line-height:22.4px;
+  outline-color:rgb(65, 65, 65);
+  padding-bottom:6px;
+  padding-left:18px;
+  padding-right:18px;
+  padding-top:6px;
+  text-align:center;
+  white-space:nowrap;
+  width:auto;
+} */
+
+.page-number-after {
+  border-color:rgb(236, 236, 236);
+  border-radius:4px;
+  border-style:solid;
+  border-width:1px;
+  box-sizing:border-box;
+  color:rgb(65, 65, 65);
+  cursor:pointer;
+  display:inline-block;
+  font-weight:700;
+  height:36px;
+  line-height:22.4px;
+  outline-color:rgb(65, 65, 65);
+  padding-bottom:6px;
+  padding-left:18px;
+  padding-right:18px;
+  padding-top:6px;
+  text-align:center;
+  white-space:nowrap;
+  width:auto;
+}
+
+.page-number-after:hover {
+  background: #f9f9f9;
+  color: #f6870f;
+  fill: #f6870f;
+}
+
+/* .page-number-after:disabled {
+  background-color: gray;
+  opacity: 50%;
+} */

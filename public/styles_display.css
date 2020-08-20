@@ -1,0 +1,970 @@
+body {
+  font-family: Lato,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  color: #414141;
+  font-size: 1em;
+  line-height: 1em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+h3 {
+  display: block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+#display{
+  margin-top: 35px;
+  /* padding-top: 500px; */
+}
+
+/*-----------------------------
+MODULE LAYOUT
+------------------------------*/
+.container_dv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main_dv {
+  flex-basis: 45%;
+  box-sizing: border-box;
+  margin-right: 35px;
+}
+
+.sidebar_dv {
+  flex-basis: 25%;
+  box-sizing: border-box;
+}
+
+/*-----------------------------
+CAROUSEL MAIN IMAGE
+------------------------------*/
+
+.mainimagedivdv {
+  max-width: 100%;
+  height: 800px;
+  border: 1px solid #DCDCDC;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainimagedv {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+}
+
+
+.image_prevdv {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 36' width='16px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23414141'%3E%3Cpath d='M14,31.54A1.5,1.5,0,0,1,13,31.1l-12-12a1.5,1.5,0,0,1,0-2.12l12-12A1.5,1.5,0,0,1,15.08,7L4.1,18l11,11A1.5,1.5,0,0,1,14,31.54Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: 45% 50%;
+  width: 4rem;
+  height: 4rem;
+  background-color: hsla(0,0%,100%,.9);
+  background-repeat: no-repeat;
+  border-color: #FFF;
+  border-width: 0px;
+  border-style: none;
+  border-image: none;
+  margin: auto 0;
+  }
+
+
+.image_nextdv {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 36' width='16px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23414141'%3E%3Cpath d='M2,31.55A1.5,1.5,0,0,1,.92,29l11-11L.92,7A1.5,1.5,0,0,1,3,4.9l12,12a1.5,1.5,0,0,1,0,2.12l-12,12A1.5,1.5,0,0,1,2,31.55Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: 55% 50%;
+  right: -5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: hsla(0,0%,100%,.9);
+  background-repeat: no-repeat;
+  border-color: #FFF;
+  border-width: 0px;
+  border-style: none;
+  border-image: none;
+  margin: auto 0;
+}
+
+/*-----------------------------
+CAROUSEL IMAGE BAR
+------------------------------*/
+
+.carousel_bardv {
+  max-width: 100%;
+  height: 55px;
+  justify-content: right;
+  border: 1px solid #DCDCDC;
+  display: flex;
+}
+
+.imagebarspandv {
+  height: 45px;
+  width: 45px;
+  border: 1px solid #DCDCDC;
+  display: flex;
+  margin: 5px 5px;
+}
+
+img.unselectedthumbnaildv {
+  max-height: 90%;
+  max-width: 90%;
+  opacity: .6;
+  margin: auto;
+}
+
+img.selectedthumbnaildv {
+  max-height: 90%;
+  max-width: 90%;
+  margin: auto;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+/*-----------------------------
+ABOUT THIS LISTING
+------------------------------*/
+.aboutlistingdv {
+  margin-top: 15px;
+  padding: 0px 15px 15px 15px;
+  border: 1px solid #DCDCDC;
+}
+
+.aboutcontentdv {
+  overflow: hidden;
+  position: relative;
+  padding-top: 0;
+  font-size: .9em;
+  height: 4.4em;
+}
+
+.aboutcontentdv::after {
+  content: "";
+  background: linear-gradient(0deg,hsla(0,0%,100%,.99),hsla(0,0%,100%,.01));
+  height: 3em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.button-as-link-dv {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #057bc4;
+  fill: #057bc4;
+  font-size: 1em;
+  cursor: pointer;
+  transition: opacity .2s;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.aboutcontentfulldv {
+  position: relative;
+  padding-top: 0;
+  font-size: .9em;
+  margin-bottom: 10px
+}
+
+.paymentsandreturnsdv {
+  border: 1px solid #d3d3d3;
+  border-top-color: rgb(211, 211, 211);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: rgb(211, 211, 211);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: rgb(211, 211, 211);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(211, 211, 211);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  background: #fff;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(255, 255, 255);
+  color: #414141;
+  fill: #414141;
+  font-size: 1.28rem;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  outline: none;
+  border-radius: .4rem;
+  appearance: none;
+  padding: .375em 1.125em;
+  white-space: nowrap;
+  padding-top: 0.375em;
+  padding-right: 1.125em;
+  padding-bottom: 0.375em;
+  padding-left: 1.125em;
+  font: 400 13.3333px Arial;
+}
+
+
+/*-----------------------------
+PRODUCT SPECS TITLE DV
+------------------------------*/
+.productspecsborderdv {
+  border: 1px solid #DCDCDC;
+  margin:10px 0px 0px 0px;
+  padding: 0px 15px;
+}
+
+.productspecstitledv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productspecstitleinsidedv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productspecsarrowdowngreydv {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 36 36' width='36px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23c1c1c1'%3E%3Cpath class='cls-1' d='M4.46,12A1.5,1.5,0,0,1,7,10.92l11,11,11-11A1.5,1.5,0,1,1,31.1,13l-12,12a1.5,1.5,0,0,1-2.12,0L4.9,13A1.5,1.5,0,0,1,4.46,12Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 3em;
+  height: 3em;
+  margin-top: 5px;
+}
+
+.productspecsarrowdowngreydv:active {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 36 36' width='36px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23f6870f'%3E%3Cpath class='cls-1' d='M4.46,12A1.5,1.5,0,0,1,7,10.92l11,11,11-11A1.5,1.5,0,1,1,31.1,13l-12,12a1.5,1.5,0,0,1-2.12,0L4.9,13A1.5,1.5,0,0,1,4.46,12Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 3em;
+  height: 3em;
+  margin-top: 5px;
+}
+
+
+.productspecsarrowupgreydv {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 36 36' width='36px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23c1c1c1'%3E%3Cpath class='cls-1' d='M31.54,24A1.5,1.5,0,0,1,29,25.09l-11-11-11,11A1.5,1.5,0,1,1,4.9,23l12-12a1.5,1.5,0,0,1,2.12,0l12,12A1.5,1.5,0,0,1,31.54,24Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 3em;
+  height: 3em;
+  margin-top: 5px;
+}
+
+.productspecsarrowupgreydv:active {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 36 36' width='36px' height='36px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23f6870f'%3E%3Cpath class='cls-1' d='M31.54,24A1.5,1.5,0,0,1,29,25.09l-11-11-11,11A1.5,1.5,0,1,1,4.9,23l12-12a1.5,1.5,0,0,1,2.12,0l12,12A1.5,1.5,0,0,1,31.54,24Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 3em;
+  height: 3em;
+  margin-top: 5px;
+}
+
+.collaspingtoggledv {
+  -webkit-border-radius: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  fill: #057bc4;
+  cursor: pointer;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  display: block;
+  font-size: .9em;
+  color: #414141;
+  opacity: .8;
+  margin-top: .2em;
+  font: 400 13.3333px Arial;
+}
+
+.specificationsdv {
+  margin:10px 0px 0px 0px;
+  padding: 0px 15px;
+  border: 1px solid #DCDCDC;
+}
+
+a.specificationlinkdv {
+  color: #057bc4;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color .1s;
+  transition: color .1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.eachspecificationdv {
+  vertical-align: top;
+  width: auto;
+  font-weight: 700;
+  padding-right: 1em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  padding-left: 0px;
+  vertical-align: top;
+}
+
+.opacity-70dv {
+  position: relative;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  opacity: .7;
+  margin-right: .25em;
+  font-size: 80%;
+}
+
+.titledivdv {
+  height: 111px;
+}
+
+.breadcrumbsdv {
+  font-size: .8em;
+  opacity: .7;
+  margin-bottom: .5em;
+}
+
+h1.titledv {
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 1.4em;
+  margin: 6.7px 0px;
+}
+
+.conditiontitledv {
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #30c966;
+}
+
+.condition-indicator__barsdivdv {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+.condition-indicator__barsdv {
+  margin-left: 0;
+  margin-right: .3rem;
+  width: .4rem;
+  height: .3rem;
+  background: #30c966;
+}
+
+/*-----------------------------
+PRICE DISPLAY DV
+------------------------------*/
+.price-displaydv {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 1.4em;
+  display: block;
+}
+
+.pricedisplaycomponentdv {
+  max-width: 100%;
+  height: 234px;
+}
+
+.shippingpricedv {
+  color: #868686;
+  font-size: 1.4rem;
+  display: block;
+  margin: 5px 0px;
+}
+
+.addtocartbuttondv {
+  margin: 10px 0px;
+  border-color: #f28209;
+  background: #f6870f;
+  color: #fff;
+  fill: #fff;
+  font-size: 1.1em;
+  width: 100%;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  border-radius: .4rem;
+  padding: .375em 1.125em;
+  border-style: none;
+}
+.addtocartbuttondv:hover {
+  background: #f79328;
+  color: #fff;
+  fill: #fff;
+}
+
+.watchbuttondv {
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  color: #414141;
+  fill: #414141;
+  width: 100%;
+  padding-left: .5em;
+  padding-right: .5em;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border-radius: .4rem;
+  appearance: none;
+  padding: 11px 8px;
+}
+
+.watchbuttondv:hover {
+  background: #f9f9f9;
+  color: #f6870f;
+  fill: #f6870f;
+  text-decoration: none;
+}
+
+.dropalertsdv {
+  max-width: 100%;
+
+}
+
+.dropalertpngdv {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.pricewatchdivdv {
+  content: "\F006";
+  margin-right: .5em;
+  opacity: .7;
+}
+
+/*-----------------------------
+NUDGE DV
+------------------------------*/
+
+
+
+.shippingquicklydv {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: .9em;
+}
+
+.shippingquicklyicondv {
+  display: block;
+  width: 4rem;
+  height: 2.7rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 30' width='30px' height='30px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23057bc4'%3E%3Cg fill='' fill-rule='nonzero'%3E%3Cpath d='M8 9v11.9a1 1 0 00.55.9l10 5.1A1 1 0 0020 26V14.1a1 1 0 00-.55-.9l-10-5.1A1 1 0 008 9zm2 1.63l8 4.08v9.66l-8-4.08v-9.66z'/%3E%3Cpath d='M30 9v11.9a1 1 0 01-.55.9l-10 5.1A1 1 0 0118 26V14.1a1 1 0 01.55-.9l10-5.1A1 1 0 0130 9zm-2 1.63l-8 4.08v9.66l8-4.08v-9.66z'/%3E%3Cpath d='M18.55 3.1l-10 5a1 1 0 000 1.8l10 5a1 1 0 00.9 0l10-5a1 1 0 000-1.8l-10-5a1 1 0 00-.9 0zM19 5.13L26.76 9 19 12.88 11.24 9 19 5.12z'/%3E%3Cpath d='M13.64 6.89l.97-1.75L25 10.91V16l-2 1v-4.91z'/%3E%3Cpath d='M6 20v-2H1v2h5zM7 16v-2H3v2h4zM6 12v-2H0v2h6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.shippingquicklytextdv {
+  -webkit-box-flex: 1;
+  display: block;
+  flex: 1;
+  font-size: .9em;
+}
+
+.shippingquicklytitledv {
+  font-weight: 700;
+  margin: 0;
+}
+
+.shippingquicklybodydv {
+  margin: 0;
+}
+
+.buywithconfidencedv {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: .9em;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #DCDCDC;
+}
+
+.buywithconfidenceicondv {
+  display: block;
+  width: 4rem;
+  height: 2.7rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  flex-shrink: 0;
+  background-image: url(https://static.reverb-assets.com/assets/webpack/_/_/_/node_modules/@reverbdotcom/discovery-ui/images/icons/simple-shield-1c926948b5205130a63885cb06fcd25f.svg);
+}
+
+.buywithconfidencetextdv {
+  -webkit-box-flex: 1;
+  display: block;
+  flex: 1;
+  font-size: .9em;
+}
+
+.buywithconfidencetitledv {
+  font-weight: 700;
+  margin: 0;
+}
+
+.buywithconfidencebodydv {
+  margin: 0;
+}
+
+.affirmdv {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: .9em;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #DCDCDC;
+}
+
+.affirmicondv {
+  display: block;
+  width: 4rem;
+  height: 2.7rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  flex-shrink: 0;
+  background-image: url(https://static.reverb-assets.com/assets/webpack/_/_/_/node_modules/@reverbdotcom/discovery-ui/images/icons/affirm-blue-circle-34c46f9bc292228385992b6ea2961806.svg);
+}
+
+.affirmtextdv {
+  -webkit-box-flex: 1;
+  display: block;
+  flex: 1;
+  font-size: .9em;
+}
+
+.affirmtitledv {
+  font-weight: 700;
+  margin: 0;
+}
+
+.affirmbodydv {
+  margin: 0;
+}
+
+.button-as-link-nudge-dv {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #057bc4;
+  fill: #057bc4;
+  font-size: 1em;
+  cursor: pointer;
+  transition: opacity .2s;
+  -webkit-tap-highlight-color: transparent;
+  margin-bottom: 10px
+}
+
+/*-----------------------------
+SELLER DV
+------------------------------*/
+
+.sellercomponentdv {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #DCDCDC;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sellerheaderdv {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: .7;
+}
+
+.sellernamedv {
+  font-size: 1.6em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #414141;
+  fill: #414141;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.selleraddressdv {
+  opacity: .8;
+  font-size: 80%;
+  line-height: 1.3;
+}
+
+.sellerreviewcountdv {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: .6;
+  font-size: 1.3rem;
+  color: #414141;
+}
+
+.sellerreviewcountcontainerdv {
+  display: flex;
+  align-content: center;
+  margin-top: 5px;
+}
+
+.numberopacitydv {
+  color: #414141;
+  opacity: .6;
+}
+
+.sellerstatsdv {
+    display: flex;
+    line-height: 1.3;
+    font-size: 80%;
+    opacity: .8;
+    margin-top: 10px;
+}
+
+.weight-bolddv {
+  font-weight: 700;
+}
+
+.sellersalesstatsdv {
+  margin-right: 20px;
+}
+
+.nudgebadgedivdv {
+  display: flex;
+  align-items: center;
+}
+
+.preferredsellerbadgedv {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 40 34' width='40px' height='34px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23414141'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%2323A7DB' fill-rule='nonzero' d='M0 11.08l1.92 6-1.92 6h7.2v-12zM39.97 11l-1.93 6 1.93 6h-7.2V11z'/%3E%3Cpath fill='%23057BC4' d='M35 24.15V9.85c0-.88-.58-1.91-1.36-2.37L21.37.34a2.9 2.9 0 0 0-2.73 0L6.36 7.48A2.96 2.96 0 0 0 5 9.85v14.3c0 .88.58 1.91 1.36 2.37l12.27 7.14a2.9 2.9 0 0 0 2.73 0l12.26-7.14A2.91 2.91 0 0 0 35 24.15z'/%3E%3Cpath fill='%23FFF' fill-rule='nonzero' d='M27.31 22.9s-1.26 1.95-3.4 1.98c-2.95.04-3.02-3.49-2.93-4.89.07-1.4-.4-2.16-.6-2.43-.2-.27-.63-.48-.71-.07-.14.71-.75 2.97-.97 4.04a22.9 22.9 0 0 0-.43 2.9c-.07.77-2.3.52-2.76.56-.46.03-.85-.13-.58-1.45.4-2 3.05-11.48 3.4-12.55.38-1.07.64-1.65.64-1.65-2.11.13-4.79 2.1-4.79 4.25 0 2.14 1.91 1.07 1.91 1.07.07 1.61-1.58 2.81-3.08 2.81s-2.6-.9-2.5-2.8C10.86 8.3 20.08 8 21.76 8c1.69 0 5.47.14 5.47 3.69 0 3.54-3.36 4.69-3.9 4.9-.55.22-.87-.03-.87.3-.02.35.82.6 1.28 2.35.46 1.76 1.26 3.28 2.24 3.28 1 0 1.4-.88 1.4-.88v.02c.3.63-.07 1.23-.07 1.23zm-3.27-11.4c.2-1.9-1.46-2.48-1.56-2.4-.1.06-.26.14-.36.31-.09.17-.82 1.83-1.84 5.2-.26.84-.44 1.36-.29 1.36.02-.02 3.5.43 4.05-4.46z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  height:2.7rem;
+  flex-basis: 3.2rem;
+  width: 3.2rem;
+  background-position: 50%;
+}
+
+
+.quickresponderbadgedv {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 34' width='30px' height='34px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23414141'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23057BC4' d='M30 24.15V9.85c0-.88-.58-1.91-1.36-2.37L16.37.34a2.9 2.9 0 0 0-2.73 0L1.36 7.48A2.96 2.96 0 0 0 0 9.85v14.3c0 .88.58 1.91 1.36 2.37l12.27 7.14a2.9 2.9 0 0 0 2.73 0l12.26-7.14A2.91 2.91 0 0 0 30 24.15z'/%3E%3Cpath fill='%23FFF' fill-rule='nonzero' d='M22.47 21.01a9.55 9.55 0 0 1-4.9.64 9.09 9.09 0 0 1-4.72 2.17.39.39 0 0 1-.4-.32c-.02-.03-.02-.05 0-.1l.02-.09c0-.01 0-.05.03-.08l.05-.07.05-.07.07-.07.26-.28.28-.3.26-.34.26-.41c.07-.12.14-.3.22-.49.07-.19.16-.4.21-.62a5.97 5.97 0 0 1-2.04-1.82 3.98 3.98 0 0 1-.75-2.32c0-.95.33-1.83 1-2.65a6.65 6.65 0 0 1 2.67-1.92 9.55 9.55 0 0 1 3.7-.7 9.6 9.6 0 0 1 3.71.7 6.65 6.65 0 0 1 2.69 1.92c.65.82.98 1.7 1 2.65 0 .95-.35 1.84-.99 2.65a6.65 6.65 0 0 1-2.68 1.92zm-3.72-8.81c-1.13 0-2.18.2-3.15.57-.97.38-1.75.9-2.32 1.54a3.09 3.09 0 0 0-.87 2.1c0 .62.2 1.2.6 1.76.39.57.94 1.04 1.65 1.46l.71.41-.22.8c-.12.5-.31.97-.57 1.42.83-.35 1.59-.82 2.26-1.4l.35-.32.47.06a8.56 8.56 0 0 0 4.22-.5c.97-.39 1.75-.9 2.32-1.55.59-.65.88-1.4.88-2.14 0-.75-.29-1.46-.86-2.1a6.12 6.12 0 0 0-2.32-1.54 8.63 8.63 0 0 0-3.15-.57zM3 12h6v1H3zM5 16h4v1H5z'/%3E%3Cpath fill='%23FFF' d='M4 19h5v1H4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  height:2.7rem;
+  flex-basis: 3.2rem;
+  width: 3.2rem;
+  background-position: 50%;
+}
+
+.quickshipperbadgedv {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 34' width='30px' height='34px' preserveAspectRatio='defer' shape-rendering='geometricPrecision'%3E%3Cg fill='%23414141'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23057BC4' d='M30 24.15V9.85c0-.88-.58-1.91-1.36-2.37L16.37.34a2.9 2.9 0 0 0-2.73 0L1.36 7.48A2.96 2.96 0 0 0 0 9.85v14.3c0 .88.58 1.91 1.36 2.37l12.27 7.14a2.9 2.9 0 0 0 2.73 0l12.26-7.14A2.91 2.91 0 0 0 30 24.15z'/%3E%3Cpath fill='%23FFF' fill-rule='nonzero' d='M3.12 12.84h6.42v1.04H3.12zM5.38 16.31h4.16v1.04H5.38zM17.87 23.09v-6.5l-5.72-2.45v6.5l5.72 2.45zm1.05 0l5.72-2.45v-6.5l-5.72 2.44v6.5zm6.76-10.78v9.02l-7.29 3.1-7.28-3.1v-9.02l7.28-3.11 7.3 3.1zm-1.04.68l-6.25-2.66-6.24 2.66v.02l6.24 2.66 6.25-2.66v-.02z'/%3E%3Cpath fill='%23FFF' d='M4.34 19.44h5.21v1.04H4.34z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  height:2.7rem;
+  flex-basis: 3.2rem;
+  width: 3.2rem;
+  background-position: 50%;
+}
+
+.badgetextdv {
+  margin-left: .5rem;
+  display: inline;
+  font-size: .8em;
+  color: #057bc4;
+  font-weight: 700;
+}
+
+.sellerbuttonscontainerdv {
+  display: flex;
+  margin: 5px;
+  align-content: flex-end;
+  width: 400px;
+}
+
+.sellerbuttondivdv {
+  width:100%;
+  margin: 5px;
+}
+
+.sellerbuttonsdv {
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  color: #414141;
+  fill: #414141;
+  width: 100%;
+  font-size: .8rem;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  outline: none;
+  border-radius: .4rem;
+  appearance: none;
+  padding: .375em 1.125em;
+  text-decoration: none
+}
+
+.sellerbuttonsdv:hover {
+  background: #f9f9f9;
+  color: #f6870f;
+  fill: #f6870f;
+  text-decoration: none;
+}
+
+/*-----------------------------
+FIND MORE DV
+------------------------------*/
+
+.findmorecomponentdv {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #DCDCDC;
+}
+
+.findmoretitledv {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1em;
+    opacity: .7;
+}
+
+.findmorenamedv {
+  font-weight: 700;
+}
+
+.findmoreimagedivdv {
+  height: 90px;
+  width: 90px;
+  border: 1px solid #DCDCDC;
+  margin-right: 10px;
+}
+
+.findmoreimagedv {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.findmorecontainerdiv {
+  display: flex;
+}
+
+.findmorelinksdv {
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  color: #414141;
+  fill: #414141;
+  font-size: 1.3rem;
+  margin: .5rem;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  outline: none;
+  border-radius: .4rem;
+  appearance: none;
+  padding: .375em 1.125em;
+  white-space: nowrap;
+  text-decoration: none;
+  width: 100%;
+}
+
+.findmorelinksdivdv {
+  width: 400px;
+}
+
+.findmorelinksdv:hover {
+  background: #f9f9f9;
+  color: #f6870f;
+  fill: #f6870f;
+  text-decoration: none;
+}
+
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/*
+=========================
+Tooltip
+=======================*/
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color:#414141;
+  color: #FFF;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
+/*===================================
+Modal
+===================================*/
+
+
+/* The Modal (background) */
+.closedModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.openedModal {
+  display: block;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.signupmodaltitledv {
+  display: flex
+}
+
+.signuptabdv {
+  background: #f9f9f9;
+  color: #f6870f;
+  fill: #f6870f;
+  text-decoration: none;
+}
+
+.logintabdv {
+  background: #fff;
+  color: #414141;
+  fill: #414141;
+}
+
+.signupbannerdv {
+  border-color: #cde5f3;
+  background-color: #daebf6;
+  color: #1c313e;
+
+}
+
+.signupbannerheadingdv {
+  font-size: 110%;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.signupbannertextdv {
+  font-size: 80%;
+  text-align: -webkit-match-parent;
+  list-style: none;
+  text-align: center;
+
+  width: 200px;
+}
+
+.formnamedv {
+  display: flex;
+}
+
+.fieldnamesignup {
+  font-weight: 700;
+  font-size: 1.4rem;
+  display: block;
+  cursor: default;
+}
